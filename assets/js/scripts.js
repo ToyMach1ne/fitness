@@ -21,3 +21,23 @@ if (typeof jQuery === 'undefined') {
   console.log('jQuery has loaded');
 }
 // Place any jQuery/helper plugins in here.
+
+$('.font-text').on('click', function(event) {
+  var $orderButton = $('.modal-dialog');
+
+  if ($(this).hasClass('super-button-opened')) {
+    $orderButton.removeClass('headnav-opened');
+    $(this).removeClass('super-button-opened')
+    $('.close').removeClass('close-order--show')
+  } else {
+    $orderButton.addClass('headnav-opened');
+    $(this).addClass('super-button-opened')
+    $('.close').addClass('close-order--show')
+  }
+})
+$('.close').on('click', function(event) {
+  $('.modal-dialog').removeClass('headnav-opened');
+  $('.font-text').removeClass('super-button-opened')
+  $(this).removeClass('close-order--show')
+
+})

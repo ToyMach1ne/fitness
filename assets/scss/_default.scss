@@ -5490,6 +5490,10 @@ sup {
     >.wrapper1 {
       z-index: 1;
       position: relative;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover; color: rgb(255, 255, 255);
+
       >.wrapper2 {
         z-index: 1;
         position: relative;
@@ -27859,6 +27863,19 @@ body.area {
     }
   }
 }
+.banner_box,
+.adv {
+        display: none !important;
+    }
+    .node345 a {
+                color: rgb(230, 25, 78);
+            }
+.node346 a {
+      color: rgb(230, 25, 78);
+  }
+  .node347 a {
+    color: rgb(230, 25, 78);
+  }
 @media (min-width:768px) {
   .lead {
     font-size: 21px;
@@ -28492,3 +28509,6 @@ body.area {
     right: 15px;
   }
 }
+.node359 a {
+                color: rgb(25, 133, 230);
+            }
