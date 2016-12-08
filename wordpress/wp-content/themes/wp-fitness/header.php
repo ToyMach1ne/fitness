@@ -23,22 +23,37 @@
         <div class="node node345 section section-clear">
             <div class="wrapper1 header-bg">
                 <div class="wrapper2 wrapp2">
+                <div class="filler one"></div>
+<nav id="nav-top">
+  <?php wpeHeadSecondNav(); ?>
+</nav>
+<div class="filler two"></div>
+
                     <div class="container noanimate"></div>
                     <div class="container"></div>
                     <div class="container">
                         <div class="cont">
                             <div class="node node346 widget widget-grid">
                                 <div class="wrapper1 wrapp1">
-                                    <div class="wrapper2 " style="padding: 5px;">
+                                    <div class="wrapper2 ">
                                         <div class="grid valign-middle paddings-20px xs-wrap">
                                             <div class="gridwrap">
                                                 <div class="col" style="width: 12.3835%;">
                                                     <div class="cont">
                                                         <div class="node node347 widget widget-image">
-                                                            <div class="wrapper1" style="color: rgb(255, 255, 255); border-radius: 0px;">
-                                                                <div class="wrapper2" style="padding: 5px;">
+                                                            <div class="wrapper1">
+                                                                <div class="wrapper2">
                                                                     <div class="bgimage" style="background-position: center center; background-size: contain; height: 50px; background-image: url(&quot;//u0.platformalp.ru/s/34iag0051/42cc608cfa36537c60ba2b136c5894b9/88d7e56a1ffe18a87b7c40c4ee945b44.png&quot;);">
-                                                                    <img class="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" title="Тренер онлайн" alt="Фитнес тренер онлайн"></div>
+
+ <?php if ( is_page('31') ){ } else { ?>
+            <a href="<?php echo home_url(); ?>">
+              <?php  } ?>
+              <img src="<?php echo get_template_directory_uri(); ?>/img/logo.gif" alt="<?php wp_title( '' ); ?>" title="<?php wp_title( '' ); ?>" class="logo-img">
+              <?php if ( is_page('31') ){
+              } else { ?>
+            </a>
+          <?php } ?>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -48,11 +63,20 @@
                                                     <div></div>
                                                     <div class="cont">
                                                         <div class="node node348 widget widget-text">
-                                                            <div class="wrapper1" style="color: rgb(255, 255, 255); border-radius: 0px;">
-                                                                <div class="wrapper2" style="padding: 5px;">
+                                                            <div class="wrapper1">
+                                                                <div class="wrapper2">
                                                                     <div class="xs-force-center textable">
-                                                                        <p><span style="font-size: 28px;"><span style="color: rgb(250, 253, 251);"><span style="font-family: Lobster;"><em>Online.FitnessTut</em></span></span>
-                                                                            </span>
+                                                                        <p>
+        <?php if ( is_page('31') ){ } else { ?>
+                    <a href="<?php echo home_url(); ?>">
+                      <?php  } ?>
+           <span style="font-size: 28px;"><span style="color: rgb(250, 253, 251);"><span style="font-family: Lobster;"><em>KOR-ONLINE.COM</em></span></span></span>
+                      <?php if ( is_page('31') ){
+                      } else { ?>
+                    </a>
+                  <?php } ?>
+
+
                                                                         </p>
                                                                     </div>
                                                                 </div>
@@ -71,13 +95,13 @@
                                 </div>
                             </div>
                             <div class="node node355 widget widget-text">
-                                <div class="wrapper1" style="color: rgb(255, 255, 255); border-radius: 0px;">
-                                    <div class="wrapper2" style="padding: 100px 5px 5px;">
+                                <div class="wrapper1">
+                                    <div class="wrapper2 wrapp-padding">
                                         <h1 class="font-header spans xs-force-center textable"><span class="p" style="font-size: 34px;"><span style="font-size: 48px;"><strong><span style="font-family: &quot;Uni Sans&quot;, impact;"><?php the_field('slogan'); ?></span></strong></span></span></h1></div>
                                 </div>
                             </div>
                             <div class="node node356 widget widget-text">
-                                <div class="wrapper1" style="color: rgb(255, 255, 255); border-radius: 0px;">
+                                <div class="wrapper1">
                                     <div class="wrapper2" style="padding: 5px;">
                                         <div class="xs-force-center textable">
                                             <p><span style="font-family: Lobster, cursive; font-size: 26px;"><?php the_field('underslogan'); ?></span></p>
@@ -86,7 +110,7 @@
                                 </div>
                             </div>
                             <div class="node node357 widget widget-grid">
-                                <div class="wrapper1" style="color: rgb(255, 255, 255); border-radius: 0px;">
+                                <div class="wrapper1">
                                     <div class="wrapper2" style="padding: 25px 5px 5px;">
                                         <div class="grid valign-middle paddings-20px xs-wrap">
                                             <div class="gridwrap">

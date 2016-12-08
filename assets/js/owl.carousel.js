@@ -1,27 +1,3 @@
-// Avoid `console` errors in browsers that lack a console.
-(function() {
-  var method;
-  var noop = function() {};
-  var methods = ['assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error', 'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log', 'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd', 'timeline', 'timelineEnd', 'timeStamp', 'trace', 'warn'];
-  var length = methods.length;
-  var console = (window.console = window.console || {});
-
-  while (length--) {
-    method = methods[length];
-
-    // Only stub undefined methods.
-    if (!console[method]) {
-      console[method] = noop;
-    }
-  }
-}());
-if (typeof jQuery === 'undefined') {
-  console.warn('jQuery hasn\'t loaded');
-} else {
-  console.log('jQuery has loaded');
-}
-// Place any jQuery/helper plugins in here.
-
 /*
  *  jQuery OwlCarousel v1.3.3
  *
@@ -1221,7 +1197,7 @@ if (typeof Object.create !== "function") {
                 iterations += 1;
                 if (base.completeImg($lazyImg.get(0)) || isBackgroundImg === true) {
                     showImage();
-                } else if (iterations <= 100) {//if image loads in less than 10 seconds
+                } else if (iterations <= 100) {//if image loads in less than 10 seconds 
                     window.setTimeout(checkLazyImage, 100);
                 } else {
                     showImage();
@@ -1250,7 +1226,7 @@ if (typeof Object.create !== "function") {
                 iterations += 1;
                 if (base.completeImg($currentimg.get(0))) {
                     addHeight();
-                } else if (iterations <= 100) { //if image loads in less than 10 seconds
+                } else if (iterations <= 100) { //if image loads in less than 10 seconds 
                     window.setTimeout(checkImage, 100);
                 } else {
                     base.wrapperOuter.css("height", ""); //Else remove height attribute
@@ -1534,84 +1510,3 @@ if (typeof Object.create !== "function") {
         afterLazyLoad: false
     };
 }(jQuery, window, document));
-
-
-
-
-
-
-
-
-$('.font-text').on('click', function(event) {
-  var $orderButton = $('.modal-dialog');
-
-  if ($(this).hasClass('super-button-opened')) {
-    $orderButton.removeClass('headnav-opened');
-    $(this).removeClass('super-button-opened')
-    $('.close').removeClass('close-order--show')
-  } else {
-    $orderButton.addClass('headnav-opened');
-    $(this).addClass('super-button-opened')
-    $('.close').addClass('close-order--show')
-  }
-})
-$('.close').on('click', function(event) {
-  $('.modal-dialog').removeClass('headnav-opened');
-  $('.font-text').removeClass('super-button-opened')
-  $(this).removeClass('close-order--show')
-
-})
-
-$(document).ready(function() {
-
-  $("#owl-demo").owlCarousel({
-      autoPlay:true,
-      navigation:true,
-      navigationText : false,
-      slideSpeed : 300,
-      paginationSpeed : 400,
-      singleItem:true,
-      pagination:true,
-
-  });
-
-});
-
-$(document).ready(function() {
-
-  $("#owl-demo-2").owlCarousel({
-      autoPlay:true,
-      navigation:true,
-      navigationText : false,
-      slideSpeed : 300,
-      paginationSpeed : 400,
-      singleItem:true,
-      pagination:true,
-
-  });
-
-});
-
-
-(function($) {
-    "use strict";
-
-    var $navbar = $("#nav-top"),
-        y_pos = $navbar.offset().top,
-        height = $navbar.height();
-
-    $(document).scroll(function() {
-        var scrollTop = $(this).scrollTop();
-
-        if (scrollTop > y_pos + height) {
-            $navbar.addClass("navbar-fixed").animate({
-                top: 0
-            });
-        } else if (scrollTop <= y_pos) {
-            $navbar.removeClass("navbar-fixed").clearQueue().animate({
-                top: "-48px"
-            }, 0);
-        }
-    });
-
-})(jQuery, undefined);

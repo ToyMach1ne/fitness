@@ -563,8 +563,11 @@
         });
 </script>
 
+
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/default.js"></script>
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/cbk.js" charset="UTF-8" async=""></script>
+
+
 
 
 <!-- END OF SCRIPTS -->

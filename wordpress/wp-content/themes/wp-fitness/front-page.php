@@ -272,8 +272,10 @@
                 <div class="cont"></div>
             </div>
             <div class="container header-simple">
-                <h2 class="font-header spans title textable gray-theme"><span class="p" style="font-size: 200%;"><span style="font-family: &quot;Open Sans&quot;;"><strong>Как будут выглядеть видео</strong></span></span></h2>
-                <div class="spans subtitle textable gray-theme"><span class="p" style="font-size: 110%;">Примеры видео упражнений для Вашей программы тренировок</span></div>
+                <h2 class="font-header spans title textable gray-theme"><span class="p" style="font-size: 200%;">
+                  <span style="font-family: &quot;Open Sans&quot;;"><strong><?php the_field('video_title'); ?></strong></span></span>
+                </h2>
+                <div class="spans subtitle textable gray-theme"><span class="p" style="font-size: 110%;"><?php the_field('video_undertitle'); ?></span></div>
             </div>
             <div class="container">
                 <div class="cont">
@@ -287,9 +289,12 @@
                             <div class="wrapper2" style="padding: 5px;">
                                 <div class="macros-video">
                                     <div class="pad-in">
-                                        <div class="video video_640x360 video1"><img src="//s.platformalp.ru/img/video/1.png" class="">
-                                            <iframe class="wrap" src="//www.youtube.com/embed/evhM89t9RK0?rel=0" frameborder="0" allowfullscreen="true"></iframe>
+                                      <div id="owl-demo-2" class="owl-second-carousel owl-theme">
+                                        <?php if( have_rows('video') ): while ( have_rows('video') ) : the_row(); ?>
+                                        <div class="item">
+                                          <iframe width="640" height="360" src="https://www.youtube.com/embed/<?php the_sub_field('video_item'); ?>" frameborder="0" allowfullscreen></iframe>
                                         </div>
+                                        <?php endwhile; endif; ?>
                                     </div>
                                 </div>
                             </div>
@@ -313,15 +318,25 @@
         <div class="wrapper2">
             <div class="container noanimate" style="height: 20px;"></div>
             <div class="container header-simple">
-                <h2 class="font-header spans title textable gray-theme"><span class="p" style="font-size: 200%;"><strong>Результаты до и после</strong></span></h2>
-                <div class="spans subtitle textable gray-theme"><span class="p" style="font-size: 110%;">Таких результатов Вы можете достичь всего лишь за несколько месяцев!</span></div>
+                <h2 class="font-header spans title textable gray-theme">
+                  <span class="p" style="font-size: 200%;"><strong><?php the_field('results_title'); ?></strong></span>
+                </h2>
+                <div class="spans subtitle textable gray-theme"><span class="p" style="font-size: 110%;"><?php the_field('results_undertitle'); ?></span></div>
             </div>
             <div class="container">
                 <div class="incon" data-red-libs="bxslider">
                     <div class="wrap">
                         <div class="bx-wrapper" style="max-width: 100%;">
 
-
+                          <div id="owl-demo" class="owl-carousel owl-theme">
+                                <?php if( have_rows('results_slider') ): while ( have_rows('results_slider') ) : the_row();
+                                // vars
+                                $image = get_sub_field('res_img');?>
+                            <div class="item">
+                              <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+                            </div>
+                                <?php endwhile; endif; ?>
+                          </div>
                         </div>
                     </div>
                 </div>
@@ -535,40 +550,18 @@
                                         <div class="cont cell">
                                             <div class="node node405 widget widget-element">
                                                 <div class="wrapper1" style="color: rgb(51, 51, 51); border-radius: 5px; border-width: 2px; border-style: solid; border-color: rgb(45, 106, 161);">
-                                                    <div class="wrapper2" style="padding: 22px 5px; border-radius: 3px;">
-                                                        <div class="cont">
-                                                            <div class="node node406 widget widget-image">
-                                                                <div class="wrapper1" style="color: rgb(51, 51, 51); border-radius: 0px;">
-                                                                    <div class="wrapper2" style="padding: 5px;">
-                                                                        <div class="bgimage" style="background-position: center center; background-size: contain; height: 200px; background-image: url(&quot;//u0.platformalp.ru/s/1ens4f051/42cc608cfa36537c60ba2b136c5894b9/321dad2097c86258203417a9ef68eaca.jpg&quot;);">
+
                                                                         <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
-                                                                        </div>
-                                                                        <noscript>&lt;img src="//u0.platformalp.ru/42cc608cfa36537c60ba2b136c5894b9/321dad2097c86258203417a9ef68eaca.jpg" alt=""&gt;</noscript>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="node node407 widget widget-text">
-                                                                <div class="wrapper1" style="color: rgb(51, 51, 51); border-radius: 0px;">
-                                                                    <div class="wrapper2" style="padding: 10px 5px;">
+
+                                                                        <div class="stuff-descr">
                                                                           <h4 class="spans xs-force-center textable">
                                                                             <span class="p" style="text-align: center; font-size: 18px;">
                                                                               <strong><?php the_sub_field('stuff_name'); ?></strong>
                                                                             </span>
                                                                           </h4>
-                                                                        </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="node node408 widget widget-text">
-                                                                <div class="wrapper1" style="color: rgb(51, 51, 51); border-radius: 0px;">
-                                                                    <div class="wrapper2" style="padding: 5px;">
-                                                                        <div class="xs-force-center textable">
                                                                             <p style="text-align: center;"><?php the_sub_field('stuff_desc'); ?></p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                                        </div><!-- stuff-descr -->
+
                                                 </div>
                                             </div>
                                         </div>
