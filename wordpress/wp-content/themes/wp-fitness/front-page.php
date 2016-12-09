@@ -1,7 +1,7 @@
 <?php /* Template Name: Home */ get_header(); ?>
 
 <!-- 1st BLOCK -->
-<div class="node node359 section section-elements">
+<div class="node node359 section section-elements" id="first-block">
             <div class="wrapper1" style="color: rgb(51, 51, 51);">
                 <div class="wrapper2">
                     <div class="container noanimate" style="height: 20px;"></div>
@@ -19,8 +19,7 @@
                             <?php if( have_rows('purpose') ): ?>
                                 <?php while( have_rows('purpose') ): the_row();
                                  // vars
-                                 $image = get_sub_field('purpose_image');
-                                                                        ?>
+                                 $image = get_sub_field('purpose_image'); ?>
                                 <div class="s-elements-grid__cell">
                                     <div class="s-elements-grid__cellwrapper" style="padding-top: 10px; padding-bottom: 10px; padding-right: 10px;">
                                         <div class="cont cell">
@@ -854,5 +853,29 @@
                     <div class="container noanimate" style="height: 20px;"></div>
                 </div>
             </div>
+        </div>
+        <div class="blog-section">
+          <div class="container">
+                      <h4>Блог</h4>
+            <div class="wrapper">
+              <?php query_posts("showposts=4&cat=9"); ?>
+                    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+              <div class="col-md-3">
+              <?php if ( has_post_thumbnail()) :?>
+                <a href="<?php the_permalink(); ?>">
+                 <?php the_post_thumbnail('thumbnail'); ?>
+                </a>
+                <?php endif; ?><!-- /post thumbnail -->
+                <div class="post-descr">
+                <a href="<?php the_permalink(); ?>">
+                  <h6><?php the_title(); ?></h6>
+                  <p><?php wpeExcerpt('wpeExcerpt10'); ?></p>
+                  </a>
+                </div>
+              </div>
+              <?php endwhile; endif; ?>
+              <?php wp_reset_query(); ?>
+            </div>
+          </div>
         </div>
         <?php get_footer(); ?>
