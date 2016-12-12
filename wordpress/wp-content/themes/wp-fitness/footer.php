@@ -1,5 +1,5 @@
 <div class="node node470 section section-clear">
-            <div class="wrapper1" style="background-color: rgb(255, 255, 255); color: rgb(51, 51, 51);">
+            <div class="wrapper1 footer-bg">
                 <div class="wrapper2">
                     <div class="container noanimate" style="height: 30px;"></div>
                     <div class="container"></div>
@@ -16,7 +16,14 @@
                                                             <div class="wrapper1" style="color: rgb(51, 51, 51); border-radius: 0px;">
                                                                 <div class="wrapper2" style="padding: 5px;">
                                                                     <div class="xs-force-center textable">
-                                                                        <p><span style="font-size: 26px;"><span style="font-family: Lobster;"><strong><em>Online.FitnessTut</em></strong></span></span>
+                                                                        <div class="footer-photo">
+                                                                          <img src="<?php echo get_template_directory_uri(); ?>/img/man.jpg" alt="">
+                                                                          <span>Евгений Корчун</span>
+                                                                        </div>
+                                                                        <div class="footer-photo">
+                                                                          <img src="<?php echo get_template_directory_uri(); ?>/img/woman.jpg" alt="">
+                                                                          <span>Юлия Рогозина</span>
+                                                                        </div>
                                                                         </p>
                                                                     </div>
                                                                 </div>
@@ -31,8 +38,8 @@
                                                             <div class="wrapper1" style="color: rgb(51, 51, 51); border-radius: 0px;">
                                                                 <div class="wrapper2" style="padding: 5px;">
                                                                     <div class="xs-force-center textable">
-                                                                        <p>E-mail: <?php the_field('footer_phone'); ?></p>
-                                                                        <p>Телефон: <?php the_field('footer_email'); ?></p>
+                                                                        <p>E-mail: <?php the_field('footer_phone', 31); ?></p>
+                                                                        <p>Телефон: <?php the_field('footer_email', 31); ?></p>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -477,10 +484,9 @@
  <?php wp_footer(); ?>
 
 <!-- SCRIPTS -->
-    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/default.js"></script>
-    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/cbk.js" charset="UTF-8" async=""></script>
-    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.mmenu.all.min.js" charset="UTF-8" async=""></script>
-    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/scripts.js" charset="UTF-8" async=""></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/owl.carousel.min.js" charset="UTF-8" async=""></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.mmenu.all.min.js" charset="UTF-8" async=""></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/scripts.js" charset="UTF-8" async=""></script>
 
 <script>
     window.plp = {
@@ -569,6 +575,11 @@
         });
 </script>
 
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/default.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/cbk.js" charset="UTF-8" async=""></script>
+
+
+    <script src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js"></script>
 
 
 

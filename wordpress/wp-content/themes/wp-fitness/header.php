@@ -126,7 +126,8 @@
                                                                     <div class="macros-button">
                                                                         <div class="btn-out center xs-none">
                                                                             <div class="btn-inner">
-                                                                                <button class="btn font-text" id="uid149" data-id="" data-action="modal" data-ym_goal="" data-ga_category="" data-ga_action="" data-modal="form"><span class="text">Отправить заявку!</span></button>
+                                                                                <button class="btn font-text" id="uid149" data-id="" data-action="modal" data-ym_goal="" data-ga_category="" data-ga_action="" data-modal="form">
+                                                                                <span class="text">Отправить заявку!</span></button>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -155,7 +156,7 @@
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
+                                                                    </div><!-- macros-modal -->
                                                                 </div>
                                                             </div>
                                                         </div>
