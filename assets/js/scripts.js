@@ -1615,3 +1615,10 @@ $(document).ready(function() {
     });
 
 })(jQuery, undefined);
+
+/**MOBILE MENU */
+
+         jQuery(document).ready(function( $ ) {
+            $("#adaptive-menu").mmenu();
+         });
+

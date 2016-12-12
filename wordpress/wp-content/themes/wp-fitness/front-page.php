@@ -323,7 +323,7 @@
                 <div class="spans subtitle textable gray-theme"><span class="p" style="font-size: 110%;"><?php the_field('results_undertitle'); ?></span></div>
             </div>
             <div class="container">
-                <div class="incon" data-red-libs="bxslider">
+                <div class="incon">
                     <div class="wrap">
                         <div class="bx-wrapper" style="max-width: 100%;">
 

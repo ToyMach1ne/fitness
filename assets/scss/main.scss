@@ -2,7 +2,30 @@
 @import 'cbk';
 @import 'owl.carousel';
 @import 'owl.theme';
+@import 'jquery.mmenu.all';
 
+
+.gridwrap {
+#adaptive-menu {
+  display: none;
+}
+}
+#hamburger {
+  display: none;
+  height: 44px;
+    width: 44px;
+    position: absolute;
+    top: 2px;
+    z-index: 2;
+    background: none;
+    left: 10px;
+    color: #f3f3f3;
+.fa-bars {
+  width: 44px;
+  height: 44px;
+  font-size: 40px;
+}
+}
 .node359 {
   .s-elements-wrapper {
     .s-elements-grid {
@@ -1645,3 +1668,126 @@ body {
     }
   }
 }
+
+
+
+/* MEDIA QUERY */
+
+@media (max-width:1200px) {
+body, html {
+  width: 100% !important;
+  .container {
+    width: 100% !important;
+  }
+  .navbar-wrap {
+    .header-nav {
+      .headnav {
+        li {
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+  .area {
+    min-width:100% !important
+  }
+}
+}
+
+@media (max-width:990px) {
+.valign-middle {
+  width: 100%;
+}
+
+    .gridwrap {
+  display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .col {
+      width: 100% !important;
+      text-align: center;
+    }
+}
+
+
+.node355, .node356, .node357 {
+  text-align: center;
+}
+}
+
+@media (max-width:700px) {
+  .node359,.node368, .node381, .node391, .node404, .node417, .node441  {
+    .s-elements-wrapper {
+      .s-elements-grid {
+          display: flex;
+    flex-direction: column;
+    align-items: center;
+    .s-elements-grid__cell {
+     padding-left: 0;
+      width: 100% !important;
+    }
+    .tbl {
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+    .textable {
+      text-align: center;
+    }
+    }
+    }
+    }
+
+  }
+  .blog-section {
+    .container {
+      .wrapper {
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    .col-md-3 {
+      width: 100%;
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+      }
+
+    }
+  }
+  #owl-demo-2 {
+    .owl-buttons {
+    position: relative;
+  }
+  }
+
+}
+
+@media (max-width:550px) {
+#hamburger {
+  display: block;
+}
+.navbar-wrap {
+  display: none !important;
+}
+.blog-section {
+  height: 1350px;
+}
+}
+@media (max-width:400px) {
+#owl-demo-2 {
+    .owl-buttons {
+    display: none;
+  }
+  }
+}
+@media (max-width:360px) {
+.blog-section {
+  height: 1450px;
+}
+}
+
+
+
+
+/* END OF MEDIA */

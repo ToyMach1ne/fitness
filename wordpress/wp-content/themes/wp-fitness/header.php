@@ -19,6 +19,7 @@
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<a href="#adaptive-menu" id="hamburger" class="humb-toggle-switch humb-toggle-switch__htx"><i class="fa fa-bars" aria-hidden="true"></i></a>
     <div class="area font-text-opensanslight font-header-opensans screen-lg">
         <div class="node node345 section section-clear">
             <div class="wrapper1 header-bg">
@@ -89,7 +90,10 @@
                                                     <?php wpeHeadNav(); ?>
                                                   </nav>
                                                 </div><!-- navbar-wrap -->
-                                            </div>
+                                                <nav class="mobile-menu" id="adaptive-menu">
+                                                    <?php wpeHeadNav(); ?>
+                                                </nav>
+                                            </div><!-- gridwrap -->
                                         </div>
                                     </div>
                                 </div>
@@ -97,14 +101,14 @@
                             <div class="node node355 widget widget-text">
                                 <div class="wrapper1">
                                     <div class="wrapper2 wrapp-padding">
-                                        <h1 class="font-header spans xs-force-center textable"><span class="p" style="font-size: 34px;"><span style="font-size: 48px;"><strong><span style="font-family: &quot;Uni Sans&quot;, impact;"><?php the_field('slogan'); ?></span></strong></span></span></h1></div>
+                                        <h1 class="font-header spans xs-force-center textable"><span class="p" style="font-size: 34px;"><span style="font-size: 48px;"><strong><span style="font-family: &quot;Uni Sans&quot;, impact;"><?php the_field('slogan', 31); ?></span></strong></span></span></h1></div>
                                 </div>
                             </div>
                             <div class="node node356 widget widget-text">
                                 <div class="wrapper1">
                                     <div class="wrapper2" style="padding: 5px;">
                                         <div class="xs-force-center textable">
-                                            <p><span style="font-family: Lobster, cursive; font-size: 26px;"><?php the_field('underslogan'); ?></span></p>
+                                            <p><span style="font-family: Lobster, cursive; font-size: 26px;"><?php the_field('underslogan', 31); ?></span></p>
                                         </div>
                                     </div>
                                 </div>

@@ -474,7 +474,13 @@
         <div class="cbk-support-new-message-copyright" style="display: block;"><a href="http://cbkiller.ru/url/cfddb7/" class="cbk-support-new-message-copyright-url" target="_blank" data-widget="invader">Работает на <span class="invader-service-name">CallbackKILLER</span></a></div>
     </div>
 
+ <?php wp_footer(); ?>
+
 <!-- SCRIPTS -->
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/default.js"></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/cbk.js" charset="UTF-8" async=""></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.mmenu.all.min.js" charset="UTF-8" async=""></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/scripts.js" charset="UTF-8" async=""></script>
 
 <script>
     window.plp = {
@@ -564,8 +570,7 @@
 </script>
 
 
-    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/default.js"></script>
-    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/cbk.js" charset="UTF-8" async=""></script>
+
 
 
 
@@ -573,8 +578,6 @@
 <!-- END OF SCRIPTS -->
 
 
-
-     <?php wp_footer(); ?>
 </body>
 
 </html>
