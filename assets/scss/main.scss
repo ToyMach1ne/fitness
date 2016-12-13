@@ -65,18 +65,17 @@ body {
   }
 }
 .node345 {
+  z-index:15;
   .header-bg {
     position: relative;
     z-index: 1;
-
     color: rgb(255, 255, 255);
     background-image: url(../img/bg-tech-24.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
-background-position: 50% 50%;
-max-height:100%;
-    background-position-y: 71% !important;
+    max-height:100%;
+    background-position-y: 140% !important;
   }
   .wrapp2 {
     background-color: rgba(46, 11, 20, .639216);
@@ -1559,6 +1558,7 @@ $nav-color: #bbb;
 .navbar-fixed {
   position: fixed;
   top: -($nav-height);
+  opacity: 0.8;
 }
 
 
@@ -1794,7 +1794,7 @@ body {
       background-color: #533336;
       &:before {
         position: relative;
-        left: 48%;
+        left: 0;
 
         display: block;
 
@@ -1871,12 +1871,35 @@ body {
     border-radius: 50%;
     }
   }
+  .footnav {
+    .footernav {
+      li {
+        a {
+          color:#000;
+          text-decoration: none;
+          &:hover {
+            text-decoration: none;
+            color:#3f2227;
+          }
+        }
+      }
+    }
+  }
 }
 .single, .archive {
   .navbar-wrap {
     display: none !important;
   }
 .node470 {
+  .footer-blocks-wrap {
+    &:before {
+      display: none;
+    }
+    .col {
+    width: 25%;
+  }
+  }
+
   .footer-bg {
      background-color: #000 !important;
   .xs-force-center {
@@ -1889,8 +1912,23 @@ body {
 
   }
   }
+  .footnav {
+    .footernav {
+      li {
+        a {
+          color:#fff;
+          text-decoration: none;
+          &:hover {
+            text-decoration: none;
+            color:#e86700;
+          }
+        }
+      }
+    }
+  }
 
 }
+
 }
 
 
@@ -1914,6 +1952,17 @@ body, html {
   }
   .area {
     min-width:100% !important
+  }
+}
+}
+
+@media (max-width:1150px) {
+.node405 {
+  .wrapper1 {
+    img {
+  height: 100%;
+  width: 100%;
+    }
   }
 }
 }
@@ -1964,6 +2013,7 @@ body, html {
 
   }
   .blog-section {
+     height: 1350px;
     .container {
       .wrapper {
         display: flex;
@@ -1984,7 +2034,23 @@ body, html {
     position: relative;
   }
   }
-
+.node405 {
+  .wrapper1 {
+    img {
+      width: 100%;
+      height:auto;
+    }
+  }
+}
+#owl-demo-2 {
+  .owl-item {
+    .item {
+    iframe {
+      width: 100% !important;
+    }
+    }
+  }
+}
 }
 
 @media (max-width:550px) {

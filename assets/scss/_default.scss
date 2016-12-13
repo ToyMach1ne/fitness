@@ -5075,15 +5075,7 @@ sup {
   }
   .grid {
     >.gridwrap {
-      &:after {
-        clear: both;
-        content: " ";
-        display: table;
-      }
-      &:before {
-        content: " ";
-        display: table;
-      }
+
       clear: both;
       display: table;
       table-layout: fixed;

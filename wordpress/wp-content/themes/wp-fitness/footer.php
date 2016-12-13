@@ -9,8 +9,8 @@
                                 <div class="wrapper1" style="color: rgb(51, 51, 51); border-radius: 0px;">
                                     <div class="wrapper2" style="padding: 5px;">
                                         <div class="grid valign-middle paddings-20px xs-wrap">
-                                            <div class="gridwrap">
-                                                <div class="col" style="width: 33.3333%;">
+                                            <div class="gridwrap footer-blocks-wrap">
+                                                <div class="col">
                                                     <div class="cont">
                                                         <div class="node node472 widget widget-text">
                                                             <div class="wrapper1" style="color: rgb(51, 51, 51); border-radius: 0px;">
@@ -31,7 +31,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col" style="width: 33.3333%;">
+                                                <div class="col">
                                                     <div></div>
                                                     <div class="cont">
                                                         <div class="node node473 widget widget-text">
@@ -46,7 +46,12 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col" style="width: 33.3333%;">
+                                                <div class="col">
+                                                    <nav class="footnav">
+                                                    <?php wpeFootNav(); ?>
+                                                    </nav>
+                                                </div>
+                                                <div class="col">
                                                     <div></div>
                                                     <div class="cont">
                                                         <div class="node node474 widget widget-button">
@@ -90,7 +95,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div><!-- gridwrap -->
                                         </div>
                                     </div>
                                 </div>
